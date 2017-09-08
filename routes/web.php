@@ -16,7 +16,23 @@ $app->get('/', function () use ($app) {
 });
 
 $app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], function($app){
-	$app->get('test', function(){
-		return "api/v1";
-	});
+
+	$app->get('/method/accountsettings', 'AuthController@index');
+	$app->get('/method/dialogs_new', 'AuthController@index');
+	$app->post('/method/chatupdate', 'AuthController@index');
+	$app->post('/method/accountsignIn', 'AuthController@index');
+	$app->post('/method/accountauthorize', 'AuthController@index');
+	$app->post('/method/accountsetGcmToken', 'AuthController@index');
+	$app->post('/method/accountsignInByFacebook', 'AuthController@index');
+	$app->post('/method/accountsignInByFacebook', 'AuthController@index');
+	$app->post('/method/accountrecovery', 'AuthController@index');
+	$app->post('/method/accountsetPassword', 'AuthController@index');
+	$app->post('/method/accountdeactivate', 'AuthController@index');
+	$app->post('/method/accountsaveSettings', 'AuthController@index'); 
+	$app->post('/method/accountconnectToFacebook', 'AuthController@index');
+	$app->post('/method/accountdisconnectFromFacebook', 'AuthController@index');
+	$app->post('/method/accountlogOut', 'AuthController@index');
+	$app->post('/method/accountsetAllowComments', 'AuthController@index');
+	$app->post('/method/accountsetAllowMessages', 'AuthController@index');
+	$app->post('/method/accountsetAllowPhotosComments', 'AuthController@index');
 });
