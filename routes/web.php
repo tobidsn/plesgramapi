@@ -17,6 +17,7 @@ $app->get('/', function () use ($app) {
 
 $app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], function($app){
 
+	
 	$app->get('/method/accountsettings', 'AuthController@index');
 	$app->get('/method/dialogs_new', 'AuthController@index');
 	$app->post('/method/chatupdate', 'AuthController@index');
@@ -35,4 +36,36 @@ $app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], functi
 	$app->post('/method/accountsetAllowComments', 'AuthController@index');
 	$app->post('/method/accountsetAllowMessages', 'AuthController@index');
 	$app->post('/method/accountsetAllowPhotosComments', 'AuthController@index');
+	$app->post('/method/accountsetGeoLocation', 'AuthController@index');
+	$app->post('/method/accountaddFunds', 'AuthController@index');
+	$app->post('/method/accountsetGhostMode', 'AuthController@index');
+	$app->post('/method/accountsetAllowLikesGCM', 'AuthController@index');
+	$app->post('/method/accountsetAllowCommentsGCM', 'AuthController@index');
+	$app->post('/method/accountsetAllowFollowersGCM', 'AuthController@index');
+	$app->post('/method/accountsetAllowMessagesGCM', 'AuthController@index');
+	$app->post('/method/accountsetAllowGiftsGCM', 'AuthController@index');
+	$app->post('/method/accountsetAllowCommentReplyGCM', 'AuthController@index');
+
+
+	$app->post('/method/giftsremove', 'AuthController@index');
+	$app->get('/method/gifts', 'AuthController@index');
+	$app->post('/method/giftsselect', 'AuthController@index');
+	$app->post('/method/giftssend', 'AuthController@index');
+	$app->post('/method/profilegetPeopleNearby', 'AuthController@index');
+	$app->post('/method/accountsetVerifiedBadge', 'AuthController@index');
+	$app->post('/method/accountdisableAds', 'AuthController@index');
+	$app->get('/method/guests', 'AuthController@index');
+	$app->post('/method/supportsendTicket', 'AuthController@index');
+	
+	$app->get('/method/profile', 'AuthController@index');
+	$app->get('/method/profilefollowings', 'AuthController@index');
+	$app->get('/method/profilefollowers', 'AuthController@index');
+	$app->post('/method/profilefollow', 'AuthController@index');
+	$app->post('/method/profileuploadPhoto', 'AuthController@index');
+	$app->post('/method/profileuploadCover', 'AuthController@index');
+	
+	$app->get('/method/wall', 'AuthController@index');
+	$app->post('/method/groupcreate', 'AuthController@index');
+	$app->post('/method/groupsaveSettings', 'AuthController@index');
+
 });
