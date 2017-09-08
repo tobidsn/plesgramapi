@@ -63,9 +63,20 @@ $app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], functi
 	$app->post('/method/profilefollow', 'AuthController@index');
 	$app->post('/method/profileuploadPhoto', 'AuthController@index');
 	$app->post('/method/profileuploadCover', 'AuthController@index');
-	
+
 	$app->get('/method/wall', 'AuthController@index');
+	$app->get('/method/group', 'AuthController@index');
 	$app->post('/method/groupcreate', 'AuthController@index');
 	$app->post('/method/groupsaveSettings', 'AuthController@index');
+	$app->get('/method/groupMyGroups', 'AuthController@index');
+	$app->get('/method/groupManagedGroups', 'AuthController@index');
+	$app->get('/method/groupFollowers', 'AuthController@index');
+	$app->post('/method/groupfollow', 'AuthController@index');
+	$app->post('/method/groupsearch', 'AuthController@index');
+	$app->post('/method/groupuploadPhoto', 'AuthController@index');
+	$app->get('/method/groupWall', 'AuthController@index');
+	$app->get('/method/blacklist', 'AuthController@index');
+	$app->post('/method/blacklistnew', 'AuthController@index');
+	$app->post('/method/blacklistremove', 'AuthController@index');
 
 });
