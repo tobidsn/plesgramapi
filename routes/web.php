@@ -78,5 +78,35 @@ $app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], functi
 	$app->get('/method/blacklist', 'AuthController@index');
 	$app->post('/method/blacklistnew', 'AuthController@index');
 	$app->post('/method/blacklistremove', 'AuthController@index');
+	
+	$app->post('/method/photosremove', 'AuthController@index');
+	$app->get('/method/photos', 'AuthController@index');
+	$app->post('/method/photosnew', 'AuthController@index');
+	$app->post('/method/photosreport', 'AuthController@index');
+	$app->post('/method/photosuploadImg', 'AuthController@index');
+
+	$app->get('/method/images', 'AuthController@index');
+	$app->post('/method/imagescomment', 'AuthController@index');
+	$app->post('/method/imagescommentRemove', 'AuthController@index');
+	$app->post('/method/imageslike', 'AuthController@index');
+	$app->post('/method/imageslikes', 'AuthController@index');
+
+	$app->post('/method/videoremove', 'AuthController@index');
+	$app->post('/method/video', 'AuthController@index');
+	$app->post('/method/videonew', 'AuthController@index');
+	$app->post('/method/videoreport', 'AuthController@index');
+	$app->post('/method/videoupload', 'AuthController@index');
+	$app->post('/method/videoItem', 'AuthController@index');
+	$app->post('/method/videocomment', 'AuthController@index');
+	$app->post('/method/videocommentRemove', 'AuthController@index');
+	$app->post('/method/videolike', 'AuthController@index');
+	$app->post('/method/videolikes', 'AuthController@index');
+
+	$app->get('/method/notifications', 'AuthController@index');
+	$app->get('/method/hashtags', 'AuthController@index');
+	$app->get('/method/feeds', 'AuthController@index');
+	$app->get('/method/item', 'AuthController@index');
+	$app->get('/method/stream', 'AuthController@index');
+	$app->get('/method/popular', 'AuthController@index');
 
 });
