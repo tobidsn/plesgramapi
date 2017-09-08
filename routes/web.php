@@ -12,5 +12,11 @@
 */
 
 $app->get('/', function () use ($app) {
-    return $app->version();
+    return "Lumen RESTful API plesgram.com (http://doc.plesgram.com)";
+});
+
+$app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], function($app){
+	$app->get('test', function(){
+		return "api/v1";
+	});
 });
