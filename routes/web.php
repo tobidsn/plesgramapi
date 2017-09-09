@@ -92,7 +92,7 @@ $app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], functi
 	$app->post('/method/imageslikes', 'AuthController@index');
 
 	$app->post('/method/videoremove', 'AuthController@index');
-	$app->post('/method/video', 'AuthController@index');
+	$app->post('/method/vidNotieo', 'AuthController@index');
 	$app->post('/method/videonew', 'AuthController@index');
 	$app->post('/method/videoreport', 'AuthController@index');
 	$app->post('/method/videoupload', 'AuthController@index');
@@ -108,5 +108,33 @@ $app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], functi
 	$app->get('/method/item', 'AuthController@index');
 	$app->get('/method/stream', 'AuthController@index');
 	$app->get('/method/popular', 'AuthController@index');
+
+	$app->post('/method/appcheckUsername', 'AuthController@index');
+	$app->get('/method/appterms', 'AuthController@index');
+	$app->get('/method/appthanks', 'AuthController@index');
+	$app->post('/method/appsearch', 'AuthController@index');
+	$app->post('/method/appsearchPreload', 'AuthController@index');
+	$app->post('/method/itemsremove', 'AuthController@index');
+	$app->get('/method/items', 'AuthController@index');
+	$app->post('/method/itemsuploadImg', 'AuthController@index');
+	$app->post('/method/itemsnew', 'AuthController@index');
+	$app->post('/method/itemsedit', 'AuthController@index');
+	$app->get('/method/itemsreport', 'AuthController@index');
+	$app->get('/method/itemslike', 'AuthController@index');
+	$app->get('/method/itemslikes', 'AuthController@index');
+
+	$app->get('/method/favorites', 'AuthController@index');
+	$app->del('/method/comments', 'AuthController@index');
+	$app->post('/method/comments', 'AuthController@index');
+
+	$app->get('/method/chat', 'AuthController@index');
+	$app->del('/method/chat', 'AuthController@index');
+	$app->post('/method/chatgetPrevious', 'AuthController@index');
+	$app->post('/method/chatgetNext', 'AuthController@index');
+
+	$app->get('/method/conversations', 'AuthController@index');
+	$app->post('/method/msg', 'AuthController@index');
+
+	$app->post('/method/msg.uploadImg', 'AuthController@index');
 
 });
